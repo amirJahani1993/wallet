@@ -1,0 +1,24 @@
+{
+  "name": "@tonkeeper/shared",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "push_locales": "tolgee push ./i18n/locales",
+    "pull_locales": "tolgee pull ./i18n/locales --namespaces tonkeeper && node scripts/fix_translations.js",
+    "generate_locale": "cd i18n/locales/tonkeeper && bun translate.js"
+  },
+  "dependencies": {
+    "@tonkeeper/core": "*",
+    "@tonkeeper/router": "*",
+    "@tonkeeper/uikit": "*",
+    "date-fns": "^2.30.0",
+    "react": "18.2.0",
+    "react-native": "0.72.6",
+    "react-native-iap": "^12.10.8",
+    "react-native-qrcode-styled": "^0.2.1",
+    "react-native-web": "~0.18.10"
+  },
+  "devDependencies": {
+    "@types/react": "~18.0.24"
+  }
+}
